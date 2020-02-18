@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Menu of Donut</title>
+	<script type="text/javascript"> 
+		function totalPrice() {
+		var productCost = 2.99, totalCost = 0, tax = 0.07, shipping = 0.01; 
+		totalCost = (productCost + (productCost*tax) + (productCost*shipping)).toFixed(2); 
+		var output = document.getElementsByClassName("outputArea");
+		output[0].innerHTML = "Total Price($)" + " "+ totalCost; 
+		}
+	</script>
+</head>
+
+<style type="text/css">
+
+@import url(https://fonts.googleapis.com/css?family=Catamaran);
+
+	body
+	{
+	background-image: url(cbg.jpg);
+	background-repeat: no-repeat;
+	background-position: fixed;
+	background-size: cover;
+	height: 100%;
+	}
+
+		ul
+	{
+		background-color: ##FF5757;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+	}
+
+	ul li
+	{
+		float: left;
+
+	}
+
+
+	ul li a {	
+		font-family: Catamaran;
+		display: block;
+		width: 130px;
+		text-align: center;
+		padding: 5px 5px;
+		margin: 5px;
+		text-decoration: none;
+		color: white;
+		font-size: 30px;
+		border: 0.5px solid transparent;
+		transition: 0.6s ease;
+	}
+
+/* Change the color of links on hover */
+	ul li a:hover {
+ 		 color: grey;
+ 		}
+
+ 	nav ul li a {
+
+ 	}
+	header div h2 a{
+	color:white
+	}
+
+	hr
+	{
+	clear: both;
+	}
+
+	div h2 p {
+		font-family: Catamaran;
+		color: white;
+	}
+
+	div img  {
+		float: right;
+	}
+</style>
+
+
+<body>
+
+		<ul>
+		<li><a href="HOME.html">HOME</a></li>
+		<li><a href="project.html">MENU</a></li>
+		<li><a href="contactpage.html">CONTACT</a></li>
+		
+		<img src="azdonutco.png" 
+			 alt="Donut	save your life">
+
+		</ul>
+<header>
+
+</header>
+		
+		<div>	
+		<h2><p>Best Boba in town!</p></h2>
+			</div>
+
+	<div>		
+<!-- 	<img src="menu1.jpg" width="350px" height="430x" 
+			 alt="Donut	save your life">  -->
+
+<!-- 	<img src="menu1.jpg" width="350px" height="430x" 
+			 alt="Donut	save your life"> 
+
+	<img src="menu1.jpg" width="350px" height="430x" 
+			 alt="Donut	save your life"> 
+
+	<img src="menu1.jpg" width="350px" height="430x" 
+			 alt="Donut	save your life">   -->
+			 	</div>	
+
+			<div class="Menu">
+		
+			<div><img src="drinks.png" width="350px" height="430x" 
+			 alt="Drinks"></div>
+			 <h2>Select</h2>
+			<select name="drink" id="drink">
+		<option value=1>Thai Tea</option>
+		<option value=2>Milk Tea</option>
+		<option value=3>Papaya</option>
+		<option value=4>Yogurt</option>
+		<option value=5>Taro</option>
+		<option value=6>Pistachio</option>
+		<option value=7>Strawberry</option>
+		<option value=8>Vanilla</option>
+		<option value=9>Watermelon</option>
+		<option value=10>Almond</option>
+		<option value=11>Honeydue</option>
+		<option value=12>Americano</option>
+		<option value=13>Macchiato</option>
+		<option value=14>Cappucino</option>
+		<option value=15>Latte</option>
+		<option value=16>Mocha</option>
+	</select>
+
+	<button onclick="totalPrice()">Order</button>
+    	<p class="outputArea">Total Price($): product + tax (7%) + shipping fee (1%)</p>
+			<h2>	
+			<nav style="color: black">
+				<ul>
+				<li><a href="project.html">Donuts</a></li>
+				<li><a href="menu_drink.html">Drinks</a></li>
+			</ul>
+			</nav>
+			</h2>
+		</div>
+</body>
+</html>

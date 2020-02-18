@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Menu of Donut</title>
+	<link rel="stylesheet" type="text/css" href="donutStyle.css">
+	<script type="text/javascript"> 
+		function totalPrice() {
+		var dozen = document.getElementById("opt").value;
+		var selection = document.getElementById("food").value;
+		var productCost = 0, totalCost = 0, tax = 0.07, shipping = 0.01; 
+		if (dozen=="half") {
+			productCost = 5.49; 
+		}
+		if (dozen=="one") {
+			productCost = 9.49; 
+		}
+		if (dozen=="single") {
+			productCost = productCost + 0.99; 
+		}
+		totalCost = (productCost + (productCost*tax) + (productCost*shipping)).toFixed(2); 
+		var output = document.getElementsByClassName("outputArea");
+		output[0].innerHTML = "Total Price($)" + " "+ totalCost; 
+		}
+	</script>
+</head>
+<style type="text/css">
+
+@import url(https://fonts.googleapis.com/css?family=Catamaran);
+
+	body
+	{
+		background-image: url(cbg.jpg);
+		background-repeat: no-repeat;
+		background-position: fixed;
+		background-size: cover;
+		height: 100%;
+	}
+
+		ul
+	{
+		background-color: ##FF5757;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+	}
+
+	ul li
+	{
+		float: left;
+
+	}
+
+
+	ul li a {	
+		font-family: Catamaran;
+		display: block;
+		width: 130px;
+		text-align: center;
+		padding: 5px 5px;
+		margin: 5px;
+		text-decoration: none;
+		color: white;
+		font-size: 30px;
+		border: 0.5px solid transparent;
+		transition: 0.6s ease;
+	}
+
+/* Change the color of links on hover */
+	ul li a:hover {
+ 		 color: grey;
+ 		}
+	h2{
+	font-family: Catamaran;
+	color:white;
+	}
+
+	hr
+	{
+	clear: both;
+
+	}
+
+	div img {
+		float: right;
+	}
+</style>
+<body>
+			<ul>
+		<li><a href="HOME.html">HOME</a></li>
+		<li><a href="menu_drink.html">MENU</a></li>
+		<li><a href="contactpage.html">CONTACT</a></li>
+		
+		
+		<img src="azdonutco.png" 
+			 alt="Donut	worry be happy"> 
+			</ul>
+
+		
+		<div>	
+		<h2>Best donuts in town!</h2>
+		</div>
+
+	<div>		
+
+
+		<img src="menu1.jpg" width="350px" height="430x" 
+			 alt="Donut	save your life"> 
+	</div>	
+<p>Option</p><select name = "opt" id ="opt">
+	<option value ="single">Singles</option>
+	<option value="half">1/2 Dozen</option>
+	<option value="one">1 Dozen</option>
+</select>
+
+<p>Select</p><select name="food" id="food">
+		<option value=1>Glazed</option>
+		<option value=2>Chocolate</option>
+		<option value=3>Choco-Sprinkle</option>
+		<option value=4>Pink-Sprinkle</option>
+		<option value=5>Vanilla-Sprinkle</option>
+		<option value=6>Sugar</option>
+		<option value=7>Powder Sugar</option>
+		<option value=8>Crumb</option>
+		<option value=9>Toasted Coconut</option>
+		<option value=10>Cinn-Roll</option>
+		<option value=11>Boston Creme</option>
+		<option value=12>Boston Creme Powder</option>
+		<option value=13>Rasberry Filling</option>
+		<option value=14>Lemon Filling</option>
+		<option value=15>Rasberry Powder</option>
+		<option value=16>Blueberry Powder</option>
+		<option value=17>Choco-Bar</option>
+		<option value=18>Maple-Bar</option>
+		<option value=19>Glazed Twist</option>
+		<option value=20>Cinammon Twist</option>
+		<option value=21>Glazed French</option>
+		<option value=22>Choco French</option>
+		<option value=23>Apple Fritter</option>
+		<option value=24>Butter Milk</option>
+		<option value=25>Choco Old</option>
+		<option value=26>Old Glazed</option>
+		<option value=27>Plain Cake</option>
+		<option value=28>Glazed Cake</option>
+	</select> 
+    	<button onclick="totalPrice()">Order</button>
+    	<p class="outputArea">Total Price($): product + tax (7%) + shipping fee (1%)</p>
+			<div class="Menu" >
+			<h2>	
+			<nav style="color: black">
+				<ul>
+				<li><a href="project.html">Donuts</a></li>
+				<li><a href="menu_drink.html">Drinks</a></li>
+			</ul>
+			</nav>
+			</h2>
+		</div>
+</body>
+</html>
